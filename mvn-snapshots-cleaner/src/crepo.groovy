@@ -1,7 +1,8 @@
 
 /**
- * 
+ * get a list of maven-snapshots directories
  * @param root
+ * parent directory to search(ordinarily repository root path).
  * @return
  */
 def getSnapshotsDirs(File root){
@@ -18,7 +19,13 @@ def getSnapshotsDirs(File root){
 	}
 	return dirs;
 }
-
+/**
+ * 
+ * @param parent
+ * @param minNum
+ * the number of snapshot artifacts to keep.
+ * @return
+ */
 def getGarvageList(File parent, int minNum){
 	def removeList = []
 	getSnapshotsDirs(parent).each { File dir ->
