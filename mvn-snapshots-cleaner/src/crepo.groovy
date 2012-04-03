@@ -47,7 +47,7 @@ def getGarvageList(File parent, int minNum){
 
 def cmd = this.class.name + '.groovy'
 CliBuilder cli = new CliBuilder(usage:"${cmd} [options] [root-directory]")
-cli.h(longOpt:'help','display this message.')
+cli.h(longOpt:'help','display this messages.')
 cli.k(longOpt:'keep', 'minimun number of snapshots to keep for one GAV.', args:1, argName:'number')
 cli.v(longOpt:'verbose', 'display file name to process.')
 cli.o(longOpt:'output-list', args:1, argName:'file','output list of all files to be removed.')
